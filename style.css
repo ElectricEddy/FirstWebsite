@@ -147,22 +147,21 @@ tr:nth-child(even) {
 
 /* Style the container/contact section */
 .container {
-  border-radius: 5px;
+  display: flex;
+  flex-basis: 50%;
   background-image: linear-gradient(to right, #7FFFD4 , #008B8B);
-  padding: 10px;
-  margin-top: 30px;
+  padding: 60px;
+  margin: center;
 }
 
 /* Create two columns that float next to eachother */
 .column {
-  float: center;
+  float: left;
   width: 30%;
   margin-top: 20px;
   padding: 20px;
-  align-items: center;
+  align-items: right;
 }
-
-
 
 /* RESPONSIVE */
 
@@ -187,4 +186,66 @@ tr:nth-child(even) {
     float: none;
     width: 100%;
   }
+}
+
+
+/*ABOUT US */
+
+
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.col {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cont {
+  padding: 0 16px;
+}
+
+.cont::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.about {
+  padding: 0 16px;
+  margin-top: 10px;
 }
